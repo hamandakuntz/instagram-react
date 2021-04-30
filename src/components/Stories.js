@@ -1,51 +1,45 @@
-import RenderStory from "./Story";
+import Story from "./Story";
 
-export default function RenderStories() {
+export default function Stories() {
   const storiesArray = [
     {
-      storyImagem: "assets/img/9gag.svg",
-      storyUsuario: "9gag",
+      imagem: "assets/img/9gag.svg",
+      usuario: "9gag",
     },
     {
-      storyImagem: "assets/img/meowed.svg",
-      storyUsuario: "meowed",
+      imagem: "assets/img/meowed.svg",
+      usuario: "meowed",
     },
     {
-      storyImagem: "assets/img/barked.svg",
-      storyUsuario: "barked",
+      imagem: "assets/img/barked.svg",
+      usuario: "barked",
     },
     {
-      storyImagem: "assets/img/nathanwpylestrangeplanet.svg",
-      storyUsuario: "nathanwpylestrangeplanet",
+      imagem: "assets/img/nathanwpylestrangeplanet.svg",
+      usuario: "nathanwpylestrangeplanet",
     },
     {
-      storyImagem: "assets/img/wawawicomics.svg",
-      storyUsuario: "wawawicomics",
+      imagem: "assets/img/wawawicomics.svg",
+      usuario: "wawawicomics",
     },
     {
-      storyImagem: "assets/img/respondeai.svg",
-      storyUsuario: "respondeai",
+      imagem: "assets/img/respondeai.svg",
+      usuario: "respondeai",
     },
     {
-      storyImagem: "assets/img/filomoderna.svg",
-      storyUsuario: "filomoderna",
+      imagem: "assets/img/filomoderna.svg",
+      usuario: "filomoderna",
     },
     {
-      storyImagem: "assets/img/memeriagourmet.svg",
-      storyUsuario: "memeriagourmet",
+      imagem: "assets/img/memeriagourmet.svg",
+      usuario: "memeriagourmet",
     },
   ];
 
   return (
     <div class="stories">
-      {" "}
       {storiesArray.map((story) => {
-        return (
-          <RenderStory
-            storyImagem={story.storyImagem}
-            storyUsuario={story.storyUsuario}
-          />
-        );
+        return <Story imagem={story.imagem} usuario={story.usuario} />;
       })}
       <div class="setinha">
         <ion-icon name="chevron-forward-circle"></ion-icon>

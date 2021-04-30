@@ -1,17 +1,19 @@
-import RenderSidebar from "./Sidebar";
-import RenderStories from "./Stories";
-import RenderPosts from "./Posts";
+import Sidebar from "./Sidebar";
+import Stories from "./Stories";
+import Posts from "./Posts";
 
-export default function RenderCorpo() {
+export default function Corpo() {
   return (
     <div class="corpo">
       <div class="esquerda">
-        <RenderStories />
-        <RenderPosts />
+        <Stories />
+        <Posts />
       </div>
-      <RenderSidebar imagem= "assets/img/catanacomics.svg" 
-      usuario="catanacomics" 
-      nome="Catana"/>
+      <Sidebar
+        imagem="assets/img/catanacomics.svg"
+        usuario="catanacomics"
+        nome="Catana"
+      />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-export default function RenderPost(props) {
+export default function Post(props) {
   return (
     <div class="post">
       <div class="topo">

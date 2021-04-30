@@ -1,30 +1,26 @@
-import RenderPost from "./Post";
+import Post from "./Post";
 
-export default function RenderPosts() {
+export default function Posts() {
   const postsArray = [
     {
       icone: "assets/img/meowed.svg",
       usuario: "meowed",
       imagemPost: "assets/img/gato-telefone.svg",
-      curtidasImg: "assets/img/respondeai.svg",
-      curtidasUsuario: "respondeai",
-      curtidasNumero: "101.523"
+      curtidas: {
+        imagem: "assets/img/respondeai.svg",
+        usuario: "respondeai",
+        numero: "101.523",
+      },
     },
     {
       icone: "assets/img/barked.svg",
       usuario: "barked",
       imagemPost: "assets/img/dog.svg",
-      curtidasImg: "assets/img/adorable_animals.svg",
-      curtidasUsuario: "adorable_animals",
-      curtidasNumero: "99.159"
-    },
-    {
-      icone: "assets/img/barked.svg",
-      usuario: "barked",
-      imagemPost: "assets/img/dog.svg",
-      curtidasImg: "assets/img/adorable_animals.svg",
-      curtidasUsuario: "adorable_animals",
-      curtidasNumero: "99.159"
+      curtidas: {
+        imagem: "assets/img/adorable_animals.svg",
+        usuario: "adorable_animals",
+        numero: "99.159",
+      },
     },
   ];
 
@@ -32,13 +28,13 @@ export default function RenderPosts() {
     <div class="posts">
       {postsArray.map((post) => {
         return (
-          <RenderPost
+          <Post
             usuario={post.usuario}
             icone={post.icone}
             imagem={post.imagemPost}
-            curtidasImg={post.curtidasImg}
-            curtidasUsuario={post.curtidasUsuario}
-            curtidasNumero={post.curtidasNumero}
+            curtidasImg={post.curtidas.imagem}
+            curtidasUsuario={post.curtidas.usuario}
+            curtidasNumero={post.curtidas.numero}
           />
         );
       })}

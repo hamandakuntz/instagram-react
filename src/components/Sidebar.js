@@ -1,26 +1,31 @@
-import RenderSugestao from "./Sugestao";
+import Sugestao from "./Sugestao";
 
-export default function RenderSidebar(props) {
+export default function Sidebar(props) {
   const sugestaoArray = [
     {
       imagemUsuario: "assets/img/bad.vibes.memes.svg",
       nomeUsuario: "bad.vibes.memes",
+      status: "Segue você",
     },
     {
       imagemUsuario: "assets/img/chibirdart.svg",
       nomeUsuario: "chibirdart",
+      status: "Segue você",
     },
     {
       imagemUsuario: "assets/img/razoesparaacreditar.svg",
       nomeUsuario: "razoesparaacreditar",
+      status: "Novo no Instagram",
     },
     {
       imagemUsuario: "assets/img/adorable_animals.svg",
       nomeUsuario: "adorable_animals",
+      status: "Segue você",
     },
     {
       imagemUsuario: "assets/img/smallcutecats.svg",
       nomeUsuario: "smallcutecats",
+      status: "Segue você",
     },
   ];
 
@@ -41,9 +46,10 @@ export default function RenderSidebar(props) {
         </div>
         {sugestaoArray.map((sugestao) => {
           return (
-            <RenderSugestao
+            <Sugestao
               imagemUsuario={sugestao.imagemUsuario}
               nomeUsuario={sugestao.nomeUsuario}
+              status={sugestao.status}
             />
           );
         })}

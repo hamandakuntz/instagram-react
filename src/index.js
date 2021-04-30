@@ -1,16 +1,16 @@
 import ReactDOM from "react-dom";
-import RenderNavbar from "./components/Navbar"
-import RenderCorpo from "./components/Corpo"
-import RenderFundo from "./components/FundoMobile"
+import Navbar from "./components/Navbar";
+import Corpo from "./components/Corpo";
+import FundoMobile from "./components/FundoMobile";
 
 function App() {
-    return (
+  return (
     <>
-        <RenderNavbar/>
-        <RenderCorpo />
-        <RenderFundo />
+      <Navbar />
+      <Corpo />
+      <FundoMobile />
     </>
-    );
+  );
 }
 
 ReactDOM.render(<App />, document.querySelector(".root"));

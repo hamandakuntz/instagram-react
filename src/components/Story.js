@@ -1,12 +1,12 @@
-export default function RenderStory(props) {
+export default function Story(props) {
   return (
     <>
       <div class="story">
         <div class="imagem">
-          <img src= {props.storyImagem}/>
+          <img src={props.imagem} />
         </div>
-        <div class="usuario">{props.storyUsuario}</div>
-      </div>      
+        <div class="usuario">{props.usuario}</div>
+      </div>
     </>
   );
 }
