@@ -1,62 +1,52 @@
+import RenderStory from "./Story";
+
 export default function RenderStories() {
+  const storiesArray = [
+    {
+      storyImagem: "assets/img/9gag.svg",
+      storyUsuario: "9gag",
+    },
+    {
+      storyImagem: "assets/img/meowed.svg",
+      storyUsuario: "meowed",
+    },
+    {
+      storyImagem: "assets/img/barked.svg",
+      storyUsuario: "barked",
+    },
+    {
+      storyImagem: "assets/img/nathanwpylestrangeplanet.svg",
+      storyUsuario: "nathanwpylestrangeplanet",
+    },
+    {
+      storyImagem: "assets/img/wawawicomics.svg",
+      storyUsuario: "wawawicomics",
+    },
+    {
+      storyImagem: "assets/img/respondeai.svg",
+      storyUsuario: "respondeai",
+    },
+    {
+      storyImagem: "assets/img/filomoderna.svg",
+      storyUsuario: "filomoderna",
+    },
+    {
+      storyImagem: "assets/img/memeriagourmet.svg",
+      storyUsuario: "memeriagourmet",
+    },
+  ];
+
   return (
     <div class="stories">
-      <div class="story">
-        <div class="imagem">
-          <img src="assets/img/9gag.svg" />
-        </div>
-        <div class="usuario">9gag</div>
-      </div>
-
-      <div class="story">
-        <div class="imagem">
-          <img src="assets/img/meowed.svg" />
-        </div>
-        <div class="usuario">meowed</div>
-      </div>
-
-      <div class="story">
-        <div class="imagem">
-          <img src="assets/img/barked.svg" />
-        </div>
-        <div class="usuario">barked</div>
-      </div>
-
-      <div class="story">
-        <div class="imagem">
-          <img src="assets/img/nathanwpylestrangeplanet.svg" />
-        </div>
-        <div class="usuario">nathanwpylestrangeplanet</div>
-      </div>
-
-      <div class="story">
-        <div class="imagem">
-          <img src="assets/img/wawawicomics.svg" />
-        </div>
-        <div class="usuario">wawawicomics</div>
-      </div>
-
-      <div class="story">
-        <div class="imagem">
-          <img src="assets/img/respondeai.svg" />
-        </div>
-        <div class="usuario">respondeai</div>
-      </div>
-
-      <div class="story">
-        <div class="imagem">
-          <img src="assets/img/filomoderna.svg" />
-        </div>
-        <div class="usuario">filomoderna</div>
-      </div>
-
-      <div class="story">
-        <div class="imagem">
-          <img src="assets/img/memeriagourmet.svg" />
-        </div>
-        <div class="usuario">memeriagourmet</div>
-      </div>
-
+      {" "}
+      {storiesArray.map((story) => {
+        return (
+          <RenderStory
+            storyImagem={story.storyImagem}
+            storyUsuario={story.storyUsuario}
+          />
+        );
+      })}
       <div class="setinha">
         <ion-icon name="chevron-forward-circle"></ion-icon>
       </div>
