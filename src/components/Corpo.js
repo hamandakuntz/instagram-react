@@ -1,16 +1,15 @@
-import RenderSidebar from "./Sidebar"
-import RenderStories from "./Stories"
-import RenderPosts from "./Posts"
-
+import RenderSidebar from "./Sidebar";
+import RenderStories from "./Stories";
+import RenderPosts from "./Posts";
 
 export default function RenderCorpo() {
-    return (
+  return (
     <div class="corpo">
-        <div class="esquerda">
-          <RenderStories/>
-          <RenderPosts />          
-        </div>
-        <RenderSidebar/>
+      <div class="esquerda">
+        <RenderStories />
+        <RenderPosts />
+      </div>
+      <RenderSidebar />
     </div>
-    );
+  );
 }
