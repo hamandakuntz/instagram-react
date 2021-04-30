@@ -1,11 +1,36 @@
-export default function RenderSidebar() {
+import RenderSugestao from "./Sugestao";
+
+export default function RenderSidebar(props) {
+  const sugestaoArray = [
+    {
+      imagemUsuario: "assets/img/bad.vibes.memes.svg",
+      nomeUsuario: "bad.vibes.memes",
+    },
+    {
+      imagemUsuario: "assets/img/chibirdart.svg",
+      nomeUsuario: "chibirdart",
+    },
+    {
+      imagemUsuario: "assets/img/razoesparaacreditar.svg",
+      nomeUsuario: "razoesparaacreditar",
+    },
+    {
+      imagemUsuario: "assets/img/adorable_animals.svg",
+      nomeUsuario: "adorable_animals",
+    },
+    {
+      imagemUsuario: "assets/img/smallcutecats.svg",
+      nomeUsuario: "smallcutecats",
+    },
+  ];
+
   return (
     <div class="sidebar">
       <div class="usuario">
-        <img src="assets/img/catanacomics.svg" />
+        <img src={props.imagem} />
         <div class="texto">
-          <strong>catanacomics</strong>
-          Catana
+          <strong>{props.usuario}</strong>
+          {props.nome}
         </div>
       </div>
 
@@ -14,66 +39,14 @@ export default function RenderSidebar() {
           Sugestões para você
           <div>Ver tudo</div>
         </div>
-
-        <div class="sugestao">
-          <div class="usuario">
-            <img src="assets/img/bad.vibes.memes.svg" />
-            <div class="texto">
-              <div class="nome">bad.vibes.memes</div>
-              <div class="razao">Segue você</div>
-            </div>
-          </div>
-
-          <div class="seguir">Seguir</div>
-        </div>
-
-        <div class="sugestao">
-          <div class="usuario">
-            <img src="assets/img/chibirdart.svg" />
-            <div class="texto">
-              <div class="nome">chibirdart</div>
-              <div class="razao">Segue você</div>
-            </div>
-          </div>
-
-          <div class="seguir">Seguir</div>
-        </div>
-
-        <div class="sugestao">
-          <div class="usuario">
-            <img src="assets/img/razoesparaacreditar.svg" />
-            <div class="texto">
-              <div class="nome">razoesparaacreditar</div>
-              <div class="razao">Novo no Instagram</div>
-            </div>
-          </div>
-
-          <div class="seguir">Seguir</div>
-        </div>
-
-        <div class="sugestao">
-          <div class="usuario">
-            <img src="assets/img/adorable_animals.svg" />
-            <div class="texto">
-              <div class="nome">adorable_animals</div>
-              <div class="razao">Segue você</div>
-            </div>
-          </div>
-
-          <div class="seguir">Seguir</div>
-        </div>
-
-        <div class="sugestao">
-          <div class="usuario">
-            <img src="assets/img/smallcutecats.svg" />
-            <div class="texto">
-              <div class="nome">smallcutecats</div>
-              <div class="razao">Segue você</div>
-            </div>
-          </div>
-
-          <div class="seguir">Seguir</div>
-        </div>
+        {sugestaoArray.map((sugestao) => {
+          return (
+            <RenderSugestao
+              imagemUsuario={sugestao.imagemUsuario}
+              nomeUsuario={sugestao.nomeUsuario}
+            />
+          );
+        })}
       </div>
 
       <div class="links">

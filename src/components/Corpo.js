@@ -9,7 +9,9 @@ export default function RenderCorpo() {
         <RenderStories />
         <RenderPosts />
       </div>
-      <RenderSidebar />
+      <RenderSidebar imagem= "assets/img/catanacomics.svg" 
+      usuario="catanacomics" 
+      nome="Catana"/>
     </div>
   );
 }
